@@ -118,7 +118,8 @@ const Body = () => {
         queryString,
       },
     });
-
+    console.log(messages);
+    console.log(message);
     setValue(2);
     setQueryRows([]);
     if (!messages) addErrorMessage(message, "query");
