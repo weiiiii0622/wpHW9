@@ -116,10 +116,8 @@ const Body = () => {
     const {
       data: { messages, message },
     } = await axios.post('/cards', {
-      params: {
-        type: queryType,
-        queryString,
-      },
+      type: queryType,
+      queryString,
     });
     console.log("query finished....");
     console.log(messages);
