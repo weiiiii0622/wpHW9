@@ -72,7 +72,7 @@ router.delete("/cards", async (req, res) => {
 
 // Add
 router.post("/card", async (req, res) => {
-    console.log("query req....");
+    console.log("add req....");
     console.log(req);
     let msg = await saveScoreCard(req.body.name, req.body.subject, +req.body.score);
     res.json(msg);
@@ -80,6 +80,8 @@ router.post("/card", async (req, res) => {
 
 // Query
 router.get("/cards", async (req, res) => {
+    console.log("query req....");
+    console.log(req);
     let msg = await queryScoreCard(req.query.type, req.query.queryString);
     res.json(msg);
 });
