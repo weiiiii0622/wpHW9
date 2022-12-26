@@ -12,6 +12,8 @@ const deleteDB = async () => {
 };
 
 const saveScoreCard = async (name, subject, score) => {
+    console.log("add....");
+    console.log("name: "+name+" sub: "+subject+" score: "+score);
     const existing = await ScoreCard.findOne({ name, subject });
 
     if(existing){
@@ -40,7 +42,8 @@ const saveScoreCard = async (name, subject, score) => {
 };
 
 const queryScoreCard = async (type, queryString) => {
-
+    console.log("query....");
+    console.log(queryString);
     if(type==="name") 
         var existing = await ScoreCard.find({ name : queryString });
     else 
