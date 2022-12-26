@@ -7,7 +7,7 @@ import cors from 'cors';
 import db from './db'
 import ScoreCard from './models/ScoreCard'
 import routes from './routes';
-
+import path from 'path';
 
 
 const app = express();
