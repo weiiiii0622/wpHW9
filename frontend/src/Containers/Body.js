@@ -121,6 +121,7 @@ const Body = () => {
         queryString,
       },
     });
+    console.log("query finished....");
     console.log(messages);
     console.log(message);
     setValue(2);
