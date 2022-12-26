@@ -72,6 +72,8 @@ router.delete("/cards", async (req, res) => {
 
 // Add
 router.post("/card", async (req, res) => {
+    console.log("query req....");
+    console.log(req);
     let msg = await saveScoreCard(req.body.name, req.body.subject, +req.body.score);
     res.json(msg);
 });
