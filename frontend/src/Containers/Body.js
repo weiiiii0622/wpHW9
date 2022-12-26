@@ -110,6 +110,9 @@ const Body = () => {
   };
 
   const handleQuery = async () => {
+    console.log("query....");
+    console.log(queryType);
+    console.log(queryString);
     const {
       data: { messages, message },
     } = await axios.get('/cards', {
