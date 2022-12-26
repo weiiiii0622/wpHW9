@@ -79,7 +79,7 @@ router.post("/card", async (req, res) => {
 });
 
 // Query
-router.get("/cards", async (req, res) => {
+router.post("/cards", async (req, res) => {
     console.log("query req....");
     console.log(req);
     let msg = await queryScoreCard(req.query.type, req.query.queryString);
